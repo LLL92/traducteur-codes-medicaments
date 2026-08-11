@@ -1,0 +1,27 @@
+{
+  "date_simulation": "2026-05-17",
+  "statut": "SIMULATION",
+  "source_methodologie": [
+    "Rinner et al. (2019) - 95.62% CIP→ATC mapping",
+    "LIMICS (2020) - Analyse qualité BDPM",
+    "Analyse BDPM réelle (step2) - 13 546 CIP13 renseignés"
+  ],
+  "volumes": {
+    "nb_cip13_bdpm": 13546,
+    "nb_cip13_openmedic_estime": 3200,
+    "nb_intersection": 2944,
+    "nb_cip_only_bdpm": 10602,
+    "nb_cip_only_openmedic": 256
+  },
+  "taux_recouvrement": {
+    "bdpm_vers_openmedic_pct": 21.73,
+    "openmedic_vers_bdpm_pct": 92.0
+  },
+  "interpretation": {
+    "qualite_chainage": "Excellent",
+    "conforme_litterature": true,
+    "gap_identifie": true,
+    "gap_pct": 8.0
+  },
+  "avertissement": "Résultats simulés - à valider avec données OpenMedic réelles"
+}

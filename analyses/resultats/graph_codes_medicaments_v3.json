@@ -1,0 +1,191 @@
+{
+  "generated_by": "graph_codes_medicaments_v3.py",
+  "generated_at": "2026-06-30T10:14:32",
+  "python_version": "3.12.3 (main, Mar  3 2026, 12:15:18) [GCC 13.3.0]",
+  "nodes": [
+    {
+      "id": "CIS",
+      "label": "CIS",
+      "description": "Code Identifiant de Spécialité",
+      "source": "BDPM · ANSM",
+      "group": "identifiant",
+      "coverage_self": 1.0,
+      "count": 15848,
+      "notes": "Clé primaire de la BDPM. Pivot central du graphe. 1 CIS = 1 spécialité pharmaceutique."
+    },
+    {
+      "id": "CIP7",
+      "label": "CIP7",
+      "description": "Code Identifiant de Présentation (7 chiffres)",
+      "source": "BDPM · ANSM",
+      "group": "presentation",
+      "coverage_self": 0.477,
+      "count": null,
+      "notes": "Ancien format court. Dérivé du CIP13 par suppression du préfixe 34009 et du chiffre de contrôle."
+    },
+    {
+      "id": "CIP13",
+      "label": "CIP13",
+      "description": "Code Identifiant de Présentation (13 chiffres)",
+      "source": "BDPM · ANSM / Open Medic · CNAM",
+      "group": "presentation",
+      "coverage_self": 0.477,
+      "count": null,
+      "notes": "Format actuel (GS1). Code-barres boîte. Recouvrement OpenMedic → BDPM mesuré à 95,7 %."
+    },
+    {
+      "id": "UCD7",
+      "label": "UCD7",
+      "description": "Unité Commune de Dispensation (7 chiffres)",
+      "source": "BDPM · ANSM (référentiel hospitalier)",
+      "group": "presentation",
+      "coverage_self": null,
+      "count": null,
+      "notes": "Identifie l'unité de dispensation hospitalière, hors périmètre OpenMedic (ville)."
+    },
+    {
+      "id": "UCD13",
+      "label": "UCD13",
+      "description": "Unité Commune de Dispensation (13 chiffres)",
+      "source": "BDPM · ANSM (référentiel hospitalier)",
+      "group": "presentation",
+      "coverage_self": null,
+      "count": null,
+      "notes": "Format long du code UCD, analogue au CIP13 pour le circuit hospitalier."
+    },
+    {
+      "id": "DCI",
+      "label": "DCI",
+      "description": "Dénomination Commune Internationale",
+      "source": "BDPM · ANSM",
+      "group": "classification",
+      "coverage_self": 0.9999,
+      "count": null,
+      "notes": "Nom de la substance active. Couverture CIS → DCI quasi totale (99,99 %). 40,6 % des CIS sont multi-substances."
+    },
+    {
+      "id": "ATC1",
+      "label": "ATC niv. 1",
+      "description": "Groupe anatomique principal",
+      "source": "OMS / Open Medic · CNAM",
+      "group": "atc",
+      "coverage_self": null,
+      "count": 14,
+      "notes": "Niveau le plus agrégé de la classification ATC (ex. A — voies digestives et métabolisme)."
+    },
+    {
+      "id": "ATC2",
+      "label": "ATC niv. 2",
+      "description": "Sous-groupe thérapeutique",
+      "source": "OMS / Open Medic · CNAM",
+      "group": "atc",
+      "coverage_self": null,
+      "count": null,
+      "notes": "Regroupement par grande indication thérapeutique."
+    },
+    {
+      "id": "ATC3",
+      "label": "ATC niv. 3",
+      "description": "Sous-groupe pharmacologique",
+      "source": "OMS / Open Medic · CNAM",
+      "group": "atc",
+      "coverage_self": null,
+      "count": null,
+      "notes": "Regroupement par mécanisme d'action pharmacologique."
+    },
+    {
+      "id": "ATC4",
+      "label": "ATC niv. 4",
+      "description": "Sous-groupe chimique",
+      "source": "OMS / Open Medic · CNAM",
+      "group": "atc",
+      "coverage_self": null,
+      "count": null,
+      "notes": "Regroupement par famille chimique."
+    },
+    {
+      "id": "ATC5",
+      "label": "ATC niv. 5",
+      "description": "Substance chimique",
+      "source": "OMS / Open Medic · CNAM",
+      "group": "atc",
+      "coverage_self": null,
+      "count": null,
+      "notes": "Niveau le plus fin de la classification ATC, proche de la DCI mais non strictement équivalent."
+    }
+  ],
+  "edges": [
+    {
+      "source": "CIS",
+      "target": "CIP7",
+      "quality": "confirme",
+      "label": "1 → n (47,7 % couverts)"
+    },
+    {
+      "source": "CIS",
+      "target": "CIP13",
+      "quality": "confirme",
+      "label": "1 → n (47,7 % couverts)"
+    },
+    {
+      "source": "CIP7",
+      "target": "CIP13",
+      "quality": "confirme",
+      "label": "dérivation directe"
+    },
+    {
+      "source": "CIS",
+      "target": "UCD7",
+      "quality": "estime",
+      "label": "périmètre hospitalier"
+    },
+    {
+      "source": "UCD7",
+      "target": "UCD13",
+      "quality": "confirme",
+      "label": "dérivation directe"
+    },
+    {
+      "source": "CIS",
+      "target": "DCI",
+      "quality": "confirme",
+      "label": "99,99 % couverts"
+    },
+    {
+      "source": "DCI",
+      "target": "ATC5",
+      "quality": "estime",
+      "label": "correspondance substance"
+    },
+    {
+      "source": "ATC5",
+      "target": "ATC4",
+      "quality": "confirme",
+      "label": "hiérarchie ATC"
+    },
+    {
+      "source": "ATC4",
+      "target": "ATC3",
+      "quality": "confirme",
+      "label": "hiérarchie ATC"
+    },
+    {
+      "source": "ATC3",
+      "target": "ATC2",
+      "quality": "confirme",
+      "label": "hiérarchie ATC"
+    },
+    {
+      "source": "ATC2",
+      "target": "ATC1",
+      "quality": "confirme",
+      "label": "hiérarchie ATC"
+    },
+    {
+      "source": "CIP13",
+      "target": "ATC5",
+      "quality": "indirect",
+      "label": "via Open Medic (95,7 %)"
+    }
+  ]
+}

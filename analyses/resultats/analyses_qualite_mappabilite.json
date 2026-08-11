@@ -1,0 +1,35 @@
+{
+  "date_analyse": "2026-07-26",
+  "statut": "RÉEL",
+  "annee_reference": 2024,
+  "analyse1_conservation_dci": {
+    "annee": 2024,
+    "nb_communs_analyses": 12102,
+    "apparies_avec_dci": 12101,
+    "apparies_sans_dci": 1,
+    "taux_conservation_dci_pct": 99.99,
+    "note": "Part des CIP13 communs dont la spécialité BDPM atteinte porte au moins une DCI exploitable. Un appariement 'sans DCI' compte dans le taux de recouvrement (5.4) mais ne permet ni bascule vers la substance ni vers l'international : le taux mesure la fréquence du lien, celui-ci mesure l'information qu'il conserve."
+  },
+  "analyse2_mappabilite_dci": {
+    "nb_cis_avec_composition": 15846,
+    "mono_substance": 9414,
+    "bi_substance": 4962,
+    "multi_substance_3plus": 1470,
+    "mono_pct": 59.4,
+    "bi_pct": 31.3,
+    "multi_pct": 9.3,
+    "max_substances": 59,
+    "note": "La part mono-substance borne le mapping 1-1 'facile' vers RxNorm / ATC ; bi- et multi-substances exigent un traitement d'association que ni l'ATC ni RxNorm ne restituent trivialement."
+  },
+  "analyse3_multisubstances_chaines": {
+    "annee": 2024,
+    "nb_communs": 12102,
+    "chaines_mono_substance": 6564,
+    "chaines_multi_substance": 5537,
+    "chaines_sans_composition": 1,
+    "part_multi_parmi_chaines_pct": 45.8,
+    "part_multi_dans_bdpm_pct": 9.3,
+    "ecart_points": 36.5,
+    "note": "Compare la part multi-substance parmi les codes remboursés et chaînés à sa part dans l'ensemble de la BDPM (analyse 2). Un écart positif signifierait que les associations pèsent davantage dans la consommation réelle que dans le référentiel, amplifiant le problème de mapping international."
+  }
+}

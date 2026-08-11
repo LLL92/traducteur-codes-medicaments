@@ -1,0 +1,2 @@
+﻿/*
+  Content-Security-Policy: default-src * 'unsafe-inline' 'unsafe-eval' blob: data:; script-src * 'unsafe-inline' 'unsafe-eval' blob:; connect-src * blob: data:; worker-src * blob:;

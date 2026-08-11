@@ -1,0 +1,22 @@
+{
+  "date_analyse": "2026-05-17",
+  "sources": {
+    "bdpm": "CIS_CIP_bdpm.txt (MAJ 02/03/2026)",
+    "openmedic": "OPEN_MEDIC_2024.csv (année 2024)"
+  },
+  "volumes": {
+    "nb_cip13_bdpm": 9,
+    "nb_cip13_openmedic": 12646,
+    "nb_intersection": 0,
+    "nb_cip_only_bdpm": 9,
+    "nb_cip_only_openmedic": 12646
+  },
+  "taux_recouvrement": {
+    "bdpm_vers_openmedic_pct": 0.0,
+    "openmedic_vers_bdpm_pct": 0.0
+  },
+  "interpretation": {
+    "qualite_chainage": "Faible",
+    "gap_identifie": true
+  }
+}

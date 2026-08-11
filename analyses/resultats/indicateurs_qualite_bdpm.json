@@ -1,0 +1,37 @@
+{
+  "date_analyse": "2026-03-26",
+  "referentiel_pivot": {
+    "nb_cis_total": 15848,
+    "nb_cis_actifs": 14848,
+    "nb_cis_actifs_non_comm": 1256,
+    "taux_cis_actifs": 93.69
+  },
+  "relation_cis_cip": {
+    "nb_cis_avec_cip": 7556,
+    "nb_cis_sans_cip": 15848,
+    "taux_couverture": 47.68,
+    "cardinalite_moyenne": 2.77,
+    "cardinalite_mediane": 1,
+    "cardinalite_max": 396,
+    "nb_cis_1_cip": 5167,
+    "nb_cis_plus_5_cip": 524
+  },
+  "relation_cis_dci": {
+    "nb_cis_avec_compo": 15846,
+    "nb_cis_sans_compo": 2,
+    "taux_couverture": 99.99,
+    "nb_mono_substance": 9414,
+    "nb_multi_substances": 6432,
+    "taux_multi_substances": 40.59,
+    "nb_substances_max": 59
+  },
+  "lacunes_croisees": {
+    "nb_cis_sans_cip_ni_compo": 2,
+    "taux": 0.01
+  },
+  "qualite_cip": {
+    "taux_cip7": 100.0,
+    "taux_cip13": 64.78,
+    "nb_presentations_sans_cip13": 7364
+  }
+}

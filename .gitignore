@@ -1,0 +1,18 @@
+# Données sources (à télécharger séparément, voir README)
+data/
+*.CSV
+*.csv
+CIS_*.txt
+OPEN_MEDIC_*
+
+# Dossier de build/test local
+site_test/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.python-version
+
+# Environnement
+.DS_Store
